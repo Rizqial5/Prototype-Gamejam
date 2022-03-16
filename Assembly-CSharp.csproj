@@ -38,7 +38,11 @@
   <ItemGroup>
      <Compile Include="Assets\Script\Core\RotationMover.cs" />
      <Compile Include="Assets\Script\Movement\Mover.cs" />
-     <Compile Include="Assets\Script\Movement\ButtonBehaviour.cs" />
+     <Compile Include="Assets\Script\Controller\PlayerController.cs" />
+     <Compile Include="Assets\Script\Combat\combatBehaviour.cs" />
+     <Compile Include="Assets\Script\Attributes\Health.cs" />
+     <Compile Include="Assets\Script\Core\GameManager.cs" />
+     <Compile Include="Assets\Script\Core\FinishZone.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:/Game/Unity/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -671,6 +675,12 @@
     </Reference>
     <Reference Include="Unity.2D.IK.Runtime">
         <HintPath>D:/Games/Project Unity/Prototype Gamejam/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+        <HintPath>D:/Games/Project Unity/Prototype Gamejam/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+        <HintPath>D:/Games/Project Unity/Prototype Gamejam/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Animation.Triangle.Runtime">
         <HintPath>D:/Games/Project Unity/Prototype Gamejam/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
