@@ -93,15 +93,10 @@ namespace Gamejam.Core
             if(isRotate) return false;
 
             return false;
-            
-            
+  
         }
 
-        public Quaternion RepositionBox()
-        {
-            return transform.rotation = boxStartPosisiton;
-        }
-
+        
 
        
 

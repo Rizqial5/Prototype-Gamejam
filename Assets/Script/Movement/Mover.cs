@@ -11,9 +11,11 @@ namespace Gamejam.Movement
         [SerializeField] GameObject respawnPlace;
         
         
+        
         public float accel;
     
-        private void Start() {
+        private void Start() 
+        {
             
         }
     
@@ -22,7 +24,17 @@ namespace Gamejam.Movement
         // Update is called once per frame
         void Update()
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(Vector3.zero), Time.deltaTime * 3);
+            
+        }
+
+        public void RotationPlayer(float speedRotation)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(Vector3.zero), Time.deltaTime * speedRotation);
+        }
+
+        public void RotationPlayerReposition(Quaternion initialRotation)
+        {
+            transform.rotation = initialRotation;
         }
 
         public void Move(float accel)
@@ -30,11 +42,17 @@ namespace Gamejam.Movement
             transform.Translate(Vector3.right * accel * Time.deltaTime);
         }
 
-        public void Reposition()
+        public void Reposition(Vector3 initialPosition)
         {
-            transform.position = respawnPlace.transform.position;
-            // transform.Translate(Vector3.left,respawnPlace.transform);
+            // transform.position = respawnPlace.transform.position;
+            transform.position = initialPosition;
             
+            
+        }
+
+        public void BackwardReposition(float accel)
+        {
+            transform.Translate(Vector3.left * accel * Time.deltaTime);
         }
     }
 
