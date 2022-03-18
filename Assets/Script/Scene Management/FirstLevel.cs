@@ -5,10 +5,10 @@ namespace Gamejam.SceneManagement
 {
     public class FirstLevel : MonoBehaviour 
     {
-
+        [SerializeField] int firstLevel;
         public void FirstStage()
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(firstLevel);
         }
     
     }

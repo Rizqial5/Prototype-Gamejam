@@ -48,7 +48,7 @@ namespace Gamejam.Controller
         {   
             
             animator.SetFloat("speed", accel);
-            print(accel);
+            
             if(gameObject == null) return;
             
             if(isStopped()) return;
@@ -100,7 +100,7 @@ namespace Gamejam.Controller
         public void Respawn()
         {
             isReposition = true;
-            
+            accel = 0;
             StartCoroutine(RepositionTime(timeReposition));
             StartCoroutine(MoveAgain(damageCooldown));
         }
@@ -119,13 +119,18 @@ namespace Gamejam.Controller
 
         public IEnumerator RepositionTime(float timeReposition)
         {
-            GetComponent<SpriteRenderer>().enabled = false; //die animation
-            accel = 0;
+            mover.enabled = false; 
+            GetComponent<SpriteRenderer>().enabled = false;
+            //die animation
+            
+            
             yield return new WaitForSeconds(timeReposition);
             
             GetComponent<SpriteRenderer>().enabled = true;
             mover.RotationPlayerReposition(initialRotationPosition);
             mover.Reposition(initialPosition);
+            mover.enabled = true;
+            
             accel = initalAccel;
             isReposition = false;
         }

@@ -144,10 +144,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 914752219}
     - target: {fileID: 621424707638190058, guid: 4ff2854e302e89942a1e1f5a59ecf493, type: 3}
-      propertyPath: initalAccel
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 621424707638190058, guid: 4ff2854e302e89942a1e1f5a59ecf493, type: 3}
       propertyPath: respawnPlace
       value: 
       objectReference: {fileID: 0}
@@ -212,10 +208,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5021847472242161729, guid: 4ff2854e302e89942a1e1f5a59ecf493, type: 3}
-      propertyPath: health
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5021847472242161729, guid: 4ff2854e302e89942a1e1f5a59ecf493, type: 3}
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 1421703481}
@@ -245,6 +237,14 @@ PrefabInstance:
     - target: {fileID: 2284327665701618829, guid: 95e298a281f99434891bf58d54ec90e2, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755724259883438797, guid: 95e298a281f99434891bf58d54ec90e2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.447635
+      objectReference: {fileID: 0}
+    - target: {fileID: 3755724259883438797, guid: 95e298a281f99434891bf58d54ec90e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0286
       objectReference: {fileID: 0}
     - target: {fileID: 3755724260467748161, guid: 95e298a281f99434891bf58d54ec90e2, type: 3}
       propertyPath: speed
@@ -437,6 +437,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Game
       objectReference: {fileID: 0}
+    - target: {fileID: 2513621978910225073, guid: 2bd4073a117bfa040a54326857b5db73, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4042377168718301657, guid: 2bd4073a117bfa040a54326857b5db73, type: 3}
       propertyPath: m_UiScaleMode
       value: 1
@@ -478,10 +482,6 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 788631293}
-    - target: {fileID: 4562829363262929433, guid: f753f958770b8ec43845f65f7e56cc0f, type: 3}
-      propertyPath: m_Lens.FieldOfView
-      value: 84
-      objectReference: {fileID: 0}
     - target: {fileID: 4562829363262929434, guid: f753f958770b8ec43845f65f7e56cc0f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.724932
@@ -500,7 +500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8724627843406663872, guid: f753f958770b8ec43845f65f7e56cc0f, type: 3}
       propertyPath: field of view
-      value: 84
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 8724627843668693391, guid: f753f958770b8ec43845f65f7e56cc0f, type: 3}
       propertyPath: m_RootOrder

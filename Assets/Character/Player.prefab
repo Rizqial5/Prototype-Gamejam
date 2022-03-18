@@ -156,6 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   animator: {fileID: 1632309441975755530}
+  gameOverPanel: {fileID: 0}
   isDead: 0
 --- !u!114 &2053027919237127450
 MonoBehaviour:
@@ -197,10 +198,9 @@ MonoBehaviour:
   boxStage: {fileID: 0}
   player: {fileID: 621424707638190060}
   timeReposition: 2
-  backwardTime: 0.5
   damageCooldown: 2
   animator: {fileID: 1632309441975755530}
-  initalAccel: 5
+  initalAccel: 2
 --- !u!114 &7769585314268997799
 MonoBehaviour:
   m_ObjectHideFlags: 0

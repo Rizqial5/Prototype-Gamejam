@@ -22,10 +22,8 @@ namespace Gamejam.SceneManagement
         private void OnTriggerEnter2D(Collider2D other) {
             if(other.gameObject.tag == "Player")
             {
-                print("true");
+
                 SceneManager.LoadScene(transitionScene);
-                
-                
 
             }
         }
