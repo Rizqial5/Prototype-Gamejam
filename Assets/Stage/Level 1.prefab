@@ -832,7 +832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiltAngle: 90
   speed: 1
-  timeRotation: 2
+  timeRotation: 5
   isRotate: 0
 --- !u!114 &9191640847638630473
 MonoBehaviour:

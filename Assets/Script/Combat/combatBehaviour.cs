@@ -15,7 +15,11 @@ namespace Gamejam.Combat
             if(other.gameObject.tag == "Enemy")
             {
                 GetComponent<Health>().TakeDamage(1);
-                GetComponent<PlayerController>().Respawn();;
+                if(!GetComponent<Health>().GetDead())
+                {
+                    GetComponent<PlayerController>().Respawn();
+                } 
+                
                 
 
             }

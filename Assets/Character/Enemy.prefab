@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 4613484554170929068}
   - component: {fileID: 4613484554170929071}
   - component: {fileID: 4613484554170929070}
+  - component: {fileID: 3984571047847267624}
+  - component: {fileID: 6007542014380685697}
+  - component: {fileID: 8966779792134643285}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -72,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -4081535568910664034, guid: a8a7d1a754d4dcd48b31577db0633d3d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -96,6 +99,51 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00734645, y: -0.013896706}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
+--- !u!95 &3984571047847267624
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4613484554170929105}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d600ab29638e20447b473ec18407e76f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6007542014380685697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4613484554170929105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52415e8fe2350174e9e181d88864ad4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accel: 0
+--- !u!114 &8966779792134643285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4613484554170929105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11401acc8fbdeb04f8b6daf877d0e37d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedRotation: 2

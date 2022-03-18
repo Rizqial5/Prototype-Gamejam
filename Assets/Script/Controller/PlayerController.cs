@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Gamejam.Movement;
 using Gamejam.Core;
+using Gamejam.Attributes;
 
 namespace Gamejam.Controller
 {
@@ -11,11 +12,14 @@ namespace Gamejam.Controller
         
         [SerializeField] GameObject boxStage;
         [SerializeField] GameObject player;
-        [SerializeField] GameObject respawnPlace;
+        
         [SerializeField] float timeReposition = 2f;
-        [SerializeField] float backwardTime = 0.5f;
         [SerializeField] float damageCooldown = 0;
+
+        public Animator animator;
+
         Mover mover;
+        Health health;
         RotationMover rotationMover;
 
         Quaternion initialRotationPosition;
@@ -30,7 +34,8 @@ namespace Gamejam.Controller
 
         private void Start() 
         {
-            mover = GetComponent<Mover>();   
+            mover = GetComponent<Mover>();  
+            health = GetComponent<Health>();
             rotationMover = GetComponent<RotationMover>();
             accel = initalAccel;
             initialRotationPosition = transform.rotation; 
@@ -40,9 +45,19 @@ namespace Gamejam.Controller
         }
         // Update is called once per frame
         void Update()
-        {
+        {   
+            
+            animator.SetFloat("speed", accel);
+            print(accel);
+            if(gameObject == null) return;
+            
             if(isStopped()) return;
-            if(!isReposition)
+
+            if(health.GetDead())
+            {
+                accel = 0;
+            } 
+        
             if(isCrashed)
             {
                 accel = 0;
@@ -50,16 +65,13 @@ namespace Gamejam.Controller
                 {
                     accel = initalAccel;
                 }
-                
-                
             }
 
-            if(Input.GetKeyDown(KeyCode.R))
-            {
-                isReposition = true;
-                StartCoroutine(RepositionTime(timeReposition));
-            }
-
+            
+            
+            
+           
+            
             mover.Move(accel);
             mover.RotationPlayer(6);
 
@@ -72,22 +84,23 @@ namespace Gamejam.Controller
         {
             if(!boxStage.GetComponent<RotationMover>().isSpinning())
             {
+                accel = initalAccel;
                 return false;
             }
-            // else if(boxStage.GetComponent<RotationMover>().isSpinning())
-            // {
-            //     accel = 0;
+            else if(boxStage.GetComponent<RotationMover>().isSpinning())
+            {
                 
-            // }
+                accel = 0;
+                return true;
+            }
             
-            accel = initalAccel;
             return true;
         }
 
         public void Respawn()
         {
             isReposition = true;
-
+            
             StartCoroutine(RepositionTime(timeReposition));
             StartCoroutine(MoveAgain(damageCooldown));
         }
@@ -109,6 +122,7 @@ namespace Gamejam.Controller
             GetComponent<SpriteRenderer>().enabled = false; //die animation
             accel = 0;
             yield return new WaitForSeconds(timeReposition);
+            
             GetComponent<SpriteRenderer>().enabled = true;
             mover.RotationPlayerReposition(initialRotationPosition);
             mover.Reposition(initialPosition);

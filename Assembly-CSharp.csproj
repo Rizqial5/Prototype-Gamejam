@@ -36,13 +36,24 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\Core\FinishZone.cs" />
+     <Compile Include="Assets\Script\Scene Management\FinishZone.cs" />
+     <Compile Include="Assets\Script\Core\LevelDesc.cs" />
      <Compile Include="Assets\Script\Controller\PlayerController.cs" />
      <Compile Include="Assets\Script\Core\RotationMover.cs" />
+     <Compile Include="Assets\Script\Scene Management\TransitionAnimation.cs" />
+     <Compile Include="Assets\Script\UI\ShowPanel.cs" />
+     <Compile Include="Assets\Script\Core\persistentObject.cs" />
+     <Compile Include="Assets\Script\Scene Management\FirstLevel.cs" />
+     <Compile Include="Assets\Script\UI\ConfirmationPanel.cs" />
      <Compile Include="Assets\Script\Attributes\Health.cs" />
      <Compile Include="Assets\Script\Core\GameManager.cs" />
+     <Compile Include="Assets\Script\Core\LevelDisplay.cs" />
      <Compile Include="Assets\Script\Combat\combatBehaviour.cs" />
      <Compile Include="Assets\Script\Movement\Mover.cs" />
+     <Compile Include="Assets\Script\Attributes\HealthDisplay.cs" />
+     <Compile Include="Assets\Script\Scene Management\Fader.cs" />
+     <Compile Include="Assets\Script\Controller\EnemyController.cs" />
+     <Compile Include="Assets\Script\Sound\SoundEffect.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:/Game/Unity/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

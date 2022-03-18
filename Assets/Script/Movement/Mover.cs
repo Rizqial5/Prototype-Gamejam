@@ -1,14 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using Gamejam.Core;
+
 
 namespace Gamejam.Movement
 {
     public class Mover : MonoBehaviour
     {
-        [SerializeField] float speed = 0f;
-        [SerializeField] GameObject respawnPlace;
+
+        
         
         
         
@@ -19,13 +18,7 @@ namespace Gamejam.Movement
             
         }
     
-        // Start is called before the first frame update
-    
-        // Update is called once per frame
-        void Update()
-        {
-            
-        }
+        
 
         public void RotationPlayer(float speedRotation)
         {
